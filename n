@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homenagem ao Amigo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(120deg, #4facfe, #00f2fe);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header {
+      padding: 20px 0;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 10px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin: 0;
+      animation: brilho 2s infinite alternate;
+    }
+
+    @keyframes brilho {
+      from { text-shadow: 0 0 5px #fff; }
+      to   { text-shadow: 0 0 20px #ff0, 0 0 30px #f0f, 0 0 40px #0ff; }
+    }
+
+    img {
+      margin-top: 20px;
+      width: 250px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    p {
+      margin: 20px auto;
+      max-width: 600px;
+      font-size: 1.2em;
+      line-height: 1.6em;
+      background: rgba(0,0,0,0.4);
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Um Amigo Especial</h1>
+  </header>
+
+  <main>
+    <img src="img/dilson.jpg" alt="Foto do amigo">
+    <p>
+      Este site é uma forma de agradecer a um colega muito especial, que sempre
+      se preocupa com todos, busca manter os amigos unidos, organiza encontros
+      e faz de tudo para espalhar alegria. Poucos dão o devido valor, mas aqui
+      fica registrado: sua amizade é única e verdadeira.
+    </p>
+    <p>
+      Amizades assim são raras. Que nunca falte força, alegria e união
+      no seu caminho. Obrigado por ser essa pessoa incrível!
+    </p>
+  </main>
+
+  <footer>
+    Feito com carinho ❤️
+  </footer>
+
+  <script>
+    // Animação simples: mudar a cor de fundo aos poucos
+    const cores = ["#4facfe", "#43e97b", "#fa709a", "#fee140"];
+    let i = 0;
+    setInterval(() => {
+      document.body.style.background = 
+        `linear-gradient(120deg, ${cores[i]}, ${cores[(i+1)%cores.length]})`;
+      i = (i+1) % cores.length;
+    }, 4000);
+  </script>
+</body>
+</html>

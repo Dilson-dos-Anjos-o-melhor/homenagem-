@@ -1,0 +1,149 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homenagem ao Amigo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(120deg, #4facfe, #00f2fe);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    header {
+      padding: 20px 0;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 10px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin: 0;
+      animation: brilho 2s infinite alternate;
+    }
+
+    @keyframes brilho {
+      from { text-shadow: 0 0 5px #fff; }
+      to   { text-shadow: 0 0 20px #ff0, 0 0 30px #f0f, 0 0 40px #0ff; }
+    }
+
+    img {
+      margin-top: 20px;
+      width: 250px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    p {
+      margin: 20px auto;
+      max-width: 600px;
+      font-size: 1.2em;
+      line-height: 1.6em;
+      background: rgba(0,0,0,0.4);
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dilson dos Anjos,um Amigo Especial.</h1>
+    <h1>♧Feito pelo Soldado-Jj♧</h1>
+ </header>
+
+  <main>
+    <img src="img/dilson.jpg" alt="Foto do amigo">
+    <p>
+      Este site é uma forma de agradecer a um colega muito especial, que sempre
+      se preocupa com todos, busca manter os amigos unidos, organiza encontros
+      e faz de tudo para espalhar alegria. Poucos dão o devido valor, mas aqui
+      fica registrado: sua amizade é única e verdadeira.
+    </p>
+      
+      <img src="img/dilson2.jpg" alt="Foto do amigo">
+    <p>
+     Há pessoas que carregam dentro de si uma luz rara, e um desses tesouros é o meu amigo.
+     Ele não se contenta em apenas estar presente; ele busca unir,
+     aproximar e criar pontes entre todos.Seja numa chamada, num grupo ou num simples debate,
+      ele tem o dom de transformar encontros em momentos de partilha, amizade e reflexão.
+    </p>
+    <p>
+      Amizades assim são raras. Que nunca falte força, alegria e união
+      no seu caminho. Obrigado por ser essa pessoa incrível!
+    </p>
+     <img src="img/dilson3.jpg" alt="Foto do amigo">
+    <p>Sua preocupação não é apenas em falar, mas em ouvir,
+    acolher e dar espaço para que cada voz se sinta parte do todo.
+    Ele entende que a verdadeira força está na união, 
+    que ideias diferentes não afastam, mas engrandecem.
+    Por isso, faz de cada conversa um lugar onde a amizade se fortalece e o respeito floresce.
+    </p>
+    <img src="img/dilson4.jpg" alt="Foto do amigo">
+    <p>Ter um amigo assim é ter ao lado alguém que não constrói muros,
+    mas abre portas. É saber que sempre haverá um coração disposto a unir,
+    um sorriso capaz de acalmar e uma palavra que inspira confiança.
+   </p>
+    <img src="img/dilson5.jpg" alt="Foto do amigo">
+    <p>Esse amigo é a prova de que a amizade é,
+     antes de tudo, uma ponte que se constrói com cuidado, dedicação e amor.
+    </p>
+</main>
+
+  <footer>
+    Feito com carinho pelo
+   Soldado-Jj ❤️
+  </footer>
+
+  <script>
+    // Animação simples: mudar a cor de fundo aos poucos
+    const cores = ["#4facfe", "#43e97b", "#fa709a", "#fee140"];
+    let i = 0;
+    setInterval(() => {
+      document.body.style.background = 
+        `linear-gradient(120deg, ${cores[i]}, ${cores[(i+1)%cores.length]})`;
+      i = (i+1) % cores.length;
+    }, 4000);
+  </script>
+<script>
+  // Criar corações subindo pela tela
+  setInterval(() => {
+    const heart = document.createElement("div");
+    heart.innerHTML = "❤️";
+    heart.style.position = "fixed";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.bottom = "-20px";
+    heart.style.fontSize = "24px";
+    heart.style.animation = "rise 5s linear forwards";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+      heart.remove();
+    }, 5000);
+  }, 800);
+
+  // Animação dos corações
+  const style = document.createElement("style");
+  style.innerHTML = `
+    @keyframes rise {
+      from { transform: translateY(0); opacity: 1; }
+      to { transform: translateY(-100vh); opacity: 0; }
+    }
+  `;
+  document.head.appendChild(style);
+</script>
+
+</body>
+</html>
